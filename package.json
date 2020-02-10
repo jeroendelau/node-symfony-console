@@ -18,6 +18,8 @@
     "coverage": "nyc ./node_modules/mocha/bin/mocha tests/unit/*",
     "eslint": "npx eslint ./app"
   },
+  "files": ["src/*"],
+  "main": "src/index.js",
   "author": "Jeroen de Lau <jeroen.delau@gmail.com >",
   "license": "MIT",
   "devDependencies": {
