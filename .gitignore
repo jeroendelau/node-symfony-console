@@ -1,0 +1,33 @@
+# Local env
+/local
+node_modules
+
+# IDE stuff
+.editorconfig
+.vscode
+.idea
+*.iml
+
+# My preferences
+.eslintrc.json
+.prettierrc
+
+# Local settings
+#config/local*
+#*local.js
+
+# My CI settings
+/.circleci
+.gitlab-ci.yml
+
+# Misc
+/tmp
+bak
+.DS_Store
+*.log
+*.lock
+*.bak
+*.swp
+env.yml
+coverage
+.nyc*

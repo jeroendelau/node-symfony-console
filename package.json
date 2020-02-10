@@ -1,0 +1,44 @@
+{
+  "name": "node-symfony-console",
+  "version": "0.0.1",
+  "description": "Symfony Console Component ported to Node",
+  "keywords": "console cli symfony command line",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha  tests/*",
+    "test-watch": "./node_modules/mocha/bin/mocha --watch tests/*",
+    "coverage": "nyc ./node_modules/mocha/bin/mocha tests/unit/*",
+    "eslint": "npx eslint ./app"
+  },
+  "author": "Jeroen de Lau <jeroen.delau@gmail.com >",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "delay": "^4.3.0",
+    "mocha": "^7.0.0",
+    "mocha-each": "^2.0.1",
+    "sinon": "^8.1.1",
+    "stream-mock": "^2.0.5",
+    "mock-console": "0.0.1"
+  },
+  "dependencies": {
+    "ansi-regex": "^5.0.0",
+    "escapeshellarg": "^0.1.0",
+    "glob": "^7.1.6",
+    "js-levenshtein": "^1.1.6",
+    "locutus": "^2.0.11",
+    "lodash": "^4.17.15",
+    "memory-streams": "^0.1.3",
+    "node-range": "^0.1.0",
+    "pcre-to-regexp": "^1.1.0",
+    "range": "0.0.3",
+    "sprintf-js": "^1.1.2",
+    "striptags": "^3.1.1",
+    "supports-color": "^7.1.0",
+    "term-size": "^2.2.0",
+    "word-wrap": "^1.2.3"
+  }
+}
