@@ -1,6 +1,6 @@
 {
   "name": "node-symfony-console",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Symfony Console Component ported to Node",
   "keywords": "console cli symfony command line",
   "main": "src/index.js",
