@@ -58,6 +58,7 @@ module.exports.sprintf = require('sprintf-js').sprintf;
 module.exports.strip_tags = require('striptags');
 
 module.exports.str_pad = function (string, length, pad_string = " ", pad_type = STR_PAD_RIGHT) {
+  
   switch (pad_type) {
     case STR_PAD_LEFT:
       return string.padStart(length, pad_string);
@@ -268,10 +269,12 @@ module.exports.wordwrap = function(str, width = 75, newline ="\n", cut = false )
 
 
 module.exports.strlen = (str) => {
-  if (!str) {
+  if (str === null || str === undefined)
+  {
     return 0;
   }
-  return str.length;
+  
+  return String(str).length;
 };
 
 module.exports.str_replace = (search, replace, subject, count) => {

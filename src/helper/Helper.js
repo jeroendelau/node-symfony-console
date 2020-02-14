@@ -15,7 +15,7 @@ class Helper
 
   static strlen(string)
   {
-    if (!string)
+    if (string === null || string === undefined)
     {
       return 0;
     }

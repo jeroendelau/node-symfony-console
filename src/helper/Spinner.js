@@ -1,4 +1,5 @@
 const SpinnerFrames = require('./SpinnerFrames');
+const Terminal = require('../Terminal');
 const ConsoleSectionOutput = require('../output/ConsoleSectionOutput');
 
 module.exports = class Spinner
@@ -8,7 +9,7 @@ module.exports = class Spinner
     this.enabled = true;
     this.message = null;
     this.frames = null;
-
+      
     this.activeMsg = '';
     this.interval = null;
     this
@@ -37,14 +38,14 @@ module.exports = class Spinner
   /** {@inheritDoc} */
   start()
   {
-    if(this.output.isDecorated()) {
+    if(Terminal.stty) {
       this.enabled = true;
       this.interval = setInterval(() => {
         this.update()
       }, Math.floor(1000 / this.frames.fps));
       this.update();
       this.frames.start();
-    }else{
+    }else if(this.output.isVerbose()){
       this.output.writeln(this.message);
     }
     return this;
