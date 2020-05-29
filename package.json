@@ -1,16 +1,10 @@
 {
   "name": "node-symfony-console",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Symfony Console Component ported to Node",
-  "keywords": "console cli symfony command line",
+  "keywords": ["console", "cli", "symfony", "command", "line"],
   "main": "src/index.js",
   "homepage": "https://github.com/jeroendelau/node-symfony-console/#readme",
-  "files": {
-    "test": "tests"
-  },
-  "directories": {
-    "test": "tests"
-  },
   "repository": {
     "type" : "git",
     "url" : "https://github.com/jeroendelau/node-symfony-console.git"
@@ -22,7 +16,6 @@
     "eslint": "npx eslint ./app"
   },
   "files": ["src/*"],
-  "main": "src/index.js",
   "author": "Jeroen de Lau <jeroen.delau@gmail.com >",
   "license": "MIT",
   "devDependencies": {
@@ -31,17 +24,17 @@
     "mocha": "^7.0.0",
     "mocha-each": "^2.0.1",
     "sinon": "^8.1.1",
-    "stream-mock": "^2.0.5",
     "mock-console": "0.0.1"
   },
   "dependencies": {
+    "stream-mock": "^2.0.5",
     "ansi-regex": "^5.0.0",
+    "memory-streams": "^0.1.3",
     "escapeshellarg": "^0.1.0",
     "glob": "^7.1.6",
     "js-levenshtein": "^1.1.6",
     "locutus": "^2.0.11",
     "lodash": "^4.17.15",
-    "memory-streams": "^0.1.3",
     "node-range": "^0.1.0",
     "pcre-to-regexp": "^1.1.0",
     "range": "0.0.3",
