@@ -28,7 +28,7 @@ class Command {
     this.helperSet = null;
 
     this.definition = new InputDefinition();
-    
+
     this.configure();
   }
 
@@ -275,6 +275,13 @@ class Command {
     let name = this.name;
     let isSingleCommand = this.application && this.application.isSingleCommand();
     let scriptPath = process.argv[1].replace(process.cwd() + "/", "");
+
+    // allow to override this path
+    // for global commands
+    if(this.getApplication().command){
+      scriptPath = this.getApplication().command
+    }
+
     let placeholders = [
       '%command.name%',
       '%command.full_name%',

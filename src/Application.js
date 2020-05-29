@@ -49,6 +49,10 @@ class Application
     this.terminal = new Terminal();
     this.fallbackCommand = 'list';
     this.catchExceptions = true;
+
+    // Set application command name
+    // that is used in the help function
+    this.command = false;
   }
 
   setDispatcher(dispatcher)
